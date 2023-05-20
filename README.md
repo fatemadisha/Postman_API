@@ -76,9 +76,9 @@ npm install -g newman-reporter-htmlextra
 	> In the test case you need to validate the following field values:
 	1. > Only Message
 
-## Newman Report Summary:
+7. ## Newman Report Summary:
 
-   ![](ReportImage/Newman.jpg)
+    ![](ReportImage/Newman(part1).jpg)
 
 
 
