@@ -34,27 +34,40 @@ npm install -g newman-reporter-htmlextra
 <a href="https://documenter.getpostman.com/view/26933640/2s93m1a4tK" target="_blank">Documentation Link</a>
 
 ## Test case list:
-1. ### Create Auth Token
+1. ### Get All Booking Id
+	> Using For getting all the booking id.
+    > Here used GET method to get all the data.
+	 {
+        "bookingid": 836
+    }
+	
+2. ### Create Booking
+	> Create Data Sets Using the Dynamic Random Variables.
+    > Here used POST method to create a new.
+
+3. ### Verify Crated Booking Details
+    > Here used GET method for getting the created data.
+	> In the test case you need to validate the following field values:
+	1. > First Name
+ 	2. > Last Name
+ 	3. > totalprice
+	4. > depositpaid
+	5. > bookingdates
+	6. > additionalneeds
+
+4. ### Create Authurization Token
 	> Using Form Data with those data
+    > Here used POST method for create a new authorised token
 	1. username : admin
 	2. password: password123
-	
-1. ### Create Booking
-	> Create Data Sets Using the Dynamic Random Variables.
 
-2. ### Verify Crated Booking Details
-	> In the test case you need to validate the following field values:
- 	1. > First Name
- 	2. > Last Name
- 	3. > totalprice
-	4. > depositpaid
-	5. > bookingdates
-	6. > additionalneeds
-
-3. ### Update Booking
+5. ### Update Booking
+    > Here used PUT method for updating the data.
 	> In the test case you need to validate the following field values:
  	1. > Only Message
-4. ### Verify Verify Updated Booking Details
+
+6. ### Verify Verify Updated Booking Details
+    > Here used GET method for getting the updated data.
 	> In the test case you need to validate the following field values:
 	1. > First Name
  	2. > Last Name
@@ -63,20 +76,22 @@ npm install -g newman-reporter-htmlextra
 	5. > bookingdates
 	6. > additionalneeds
 
-5. ### Get the Booking's Full Details
-	> In the test case you need to validate the following field values:
-	1. > First Name
- 	2. > Last Name
- 	3. > totalprice
-	4. > depositpaid
-	5. > bookingdates
-	6. > additionalneeds
+7. ### Partial Update Booking
+     > Here used PATCH method for updating data partially.
+     > Here we used patch method for updating some details.
+     Example :
+        {
+         "firstname" : "Kaniz",
+         "lastname" : "Fatema"
+          }
 
-6. ### Delete Specific Booking
+8. ### Delete Specific Booking
+    > Here used DEL method for deleting a data.
 	> In the test case you need to validate the following field values:
 	1. > Only Message
 
-7. ## Newman Report Summary:
+
+9. ## Newman Report Summary:
 
     ![](ReportImage/Newman(part1).jpg)
 
