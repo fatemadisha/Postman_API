@@ -1,0 +1,16 @@
+#newman install
+-npm install -g newman
+
+
+#newman run command prompt
+
+-newman run BookingAPI.postman_collection.json -e BookingAPI.postman_environment.json
+
+#Report
+
+install: 1.npm install -g newman-reporter-html
+         2.npm install -g newman-reporter-htmlextra
+
+#Run:
+         1.newman run  BookingAPI.postman_collection.json -e BookingAPI.postman_environment.json -r cli,html
+         2.newman run  BookingAPI.postman_collection.json -e BookingAPI.postman_environment.json -r cli,htmlextra
